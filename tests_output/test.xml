@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test"
+    errors="1" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="0.004000" timestamp="Fri, 07 Sep 2018 18:22:51 GMT">
+  
+    <testcase name="THIS IS A TEST" classname="test" time="0.004000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Test / THIS IS A TEST]:
+
+  ReferenceError: randomLetter is not defined
+    at Object.randomLetters (/Users/Parker/DevMtn/Wanted Queries Automation/globalMethods/randomizer.js:39:13)
+    at Object.THIS IS A TEST (/Users/Parker/DevMtn/Wanted Queries Automation/tests/test.js:13:32)
+    at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>

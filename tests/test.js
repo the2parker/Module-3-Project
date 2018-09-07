@@ -10,7 +10,7 @@ module.exports = {
     },
     'THIS IS A TEST': browser =>
     {
-        randomizer.randomLetters(1,)
+        randomizer.randomLetters(1)
     },
     after: browser =>
     {

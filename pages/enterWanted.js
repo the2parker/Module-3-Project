@@ -9,8 +9,8 @@ module.exports = {
         mke: 'input[name="mkeInput"]',
         oai: 'input[name="oriInput"]',
         name: 'input[name="namInput"]',
-        sex: 'input[name="sexInput"]',
-        race: 'input[name="racInput"]',
+        sex: 'select[name="sexInput"]',
+        race: 'select[name="racInput"]',
         height: 'input[name="hgtInput"]',
         weight: 'input[name="wgtInput"]',
         hair: 'input[name="haiInput"]',
@@ -18,9 +18,10 @@ module.exports = {
         dow: 'input[name="dowInput"]',
         driversLicense: 'input[name="olnInput"]',
         dlState: 'input[name="olsInput"]',
-        dlYear: 'input[name="olyInput"]',
+        dlYear: 'input[name="oldInput"]',
         licensePlate: 'input[name="licInput"]',
         lpState: 'input[name="lisInput"]',
-        lpYear: 'input[name="liyInput"]'
+        lpYear: 'input[name="lidInput"]',
+        versionNumber: '#pageWrap > div:nth-child(2) > h6:nth-child(1)'
     }
 }

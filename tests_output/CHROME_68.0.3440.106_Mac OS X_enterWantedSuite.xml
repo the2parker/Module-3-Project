@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="4">
+
+  <testsuite name="enterWantedSuite"
+    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="3"
+    tests="4" time="3.687" timestamp="Sun, 09 Sep 2018 08:50:04 GMT">
+  
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="3.687" assertions="2">
+
+      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;dI445S_&amp;`j.%k.f38k29G28.`½`2UnlN84&gt;`Z%?34??i4Zk.M.B.209.301.GKYjxYFon`.__&lt;£=.03-16-2016.J8ey?9&gt;@Fd$2^H8.UT.08-14-1979.C226voJ.UT.05-04-1950&#34;">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:72:21)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="Invalid Character Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Invalid Length Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Optional Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

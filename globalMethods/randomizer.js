@@ -36,6 +36,38 @@ module.exports = {
     {
         return Math.floor(Math.random() * (max - min + 1)) + min
     },
+    randomSex: function ()
+    {
+        switch (randomizer.randomInt(1, 3))
+        {
+            case 1:
+                return 'F'
+            case 2:
+                return 'M'
+            case 3:
+                return 'U'
+        }
+        return ''
+    },
+    randomRace: function ()
+    {
+        switch (randomizer.randomInt(1, 6))
+        {
+            case 1:
+                return 'A'
+            case 2:
+                return 'B'
+            case 3:
+                return 'H'
+            case 4:
+                return 'I'
+            case 5:
+                return 'W'
+            case 6:
+                return 'U'
+        }
+        return ''
+    },
     randomLetters: function (minLength, maxLength)
     {
         let name = ''

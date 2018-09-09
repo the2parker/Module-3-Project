@@ -32,21 +32,14 @@ var randomSymbol = function (noPeriod = false)
     }
 }
 module.exports = {
+    randomInt: function (min, max)
+    {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    },
     randomLetters: function (minLength, maxLength)
     {
         let name = ''
         let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength
-
-        for (let i = 0; i < length; i++)
-        {
-            name += randomLetter()
-        }
-
-        return name
-    },
-    randomLetters: function (length)
-    {
-        let name = ''
 
         for (let i = 0; i < length; i++)
         {
@@ -111,6 +104,22 @@ module.exports = {
 
         return characters
     },
+    randomNumbers_Symbols: function (minLength, maxLength, noPeriod = false)
+    {
+        let characters = ''
+        let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength
+
+        for (let i = 0; i < length; i++)
+        {
+            let determiner = Math.floor(Math.random() * (1 + 1))
+            if (determiner == 1)
+                characters += randomSymbol(noPeriod)
+            else if (determiner == 0)
+                characters += randomNumber()
+        }
+
+        return characters
+    },
     randomLetters_Numbers_Symbols: function (minLength, maxLength, noPeriod = false)
     {
         let characters = ''
@@ -144,80 +153,31 @@ module.exports = {
             maxYear = today.getFullYear()
         }
 
-        let newDay = Math.floor(Math.random() * (maxDay - 1 + 1)) + 1
+        let newYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear
+        let newMonth = 0
+        let newDay = 0
+
+        if (newYear == maxYear)
+            newMonth = Math.floor(Math.random() * (maxMonth - 1 + 1)) + 1
+        else
+            newMonth = Math.floor(Math.random() * (12 - 1 + 1)) + 1
+
+        if (newMonth == maxMonth)
+            newDay = Math.floor(Math.random() * (maxDay - 1 + 1)) + 1
+        else
+            newDay = Math.floor(Math.random() * (31 - 1 + 1)) + 1
+
         if (newDay < 10)
             newDay = '0' + newDay
         else
             newDay = '' + newDay
 
-        let newMonth = Math.floor(Math.random() * (maxMonth - 1 + 1)) + 1
+
         if (newMonth < 10)
             newMonth = '0' + newMonth
         else
             newMonth = '' + newMonth
 
-        newYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear
-
-        return newMonth + newDay + newYear
+        return newMonth + '-' + newDay + '-' + newYear
     }, //a random date between 1900 and 2100
-    randomDate: function (minYear, notPastToday = false)
-    {
-        let maxDay = 31
-        let maxMonth = 12
-        let minYear = minYear
-        let today = new Date()
-        maxYear = today.getFullYear()
-
-        if (notPastToday)
-        {
-            maxMonth = today.getMonth() + 1
-            maxDay = today.getDate()
-        }
-
-        let newDay = Math.floor(Math.random() * (maxDay - 1 + 1)) + 1
-        if (newDay < 10)
-            newDay = '0' + newDay
-        else
-            newDay = '' + newDay
-
-        let newMonth = Math.floor(Math.random() * (maxMonth - 1 + 1)) + 1
-        if (newMonth < 10)
-            newMonth = '0' + newMonth
-        else
-            newMonth = '' + newMonth
-
-        newYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear
-
-        return newMonth + newDay + newYear
-    }, //this only includes days before or on this year, even if notPastToday is false
-    randomDate: function (minYear, maxYear, notPastToday = false)
-    {
-        let maxDay = 31
-        let maxMonth = 12
-        let minYear = minYear
-        let maxYear = maxYear
-
-        if (notPastToday)
-        {
-            let today = new Date()
-            maxMonth = today.getMonth() + 1
-            maxDay = today.getDate()
-        }
-
-        let newDay = Math.floor(Math.random() * (maxDay - 1 + 1)) + 1
-        if (newDay < 10)
-            newDay = '0' + newDay
-        else
-            newDay = '' + newDay
-
-        let newMonth = Math.floor(Math.random() * (maxMonth - 1 + 1)) + 1
-        if (newMonth < 10)
-            newMonth = '0' + newMonth
-        else
-            newMonth = '' + newMonth
-
-        newYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear
-
-        return newMonth + newDay + newYear
-    } //notPastToday ignores the current year, using the maxYear provided instead
 }

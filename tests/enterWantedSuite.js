@@ -59,7 +59,7 @@ module.exports = {
             sex: /*randomizer.randomSex()*/'F', //these don't work for some reason
             race: /*randomizer.randomRace()*/'H',
             height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9),
-            weight: randomizer.randomInt(111, 999),
+            weight: randomizer.randomNumbers(0, 9) + randomizer.randomNumbers(0, 9) + randomizer.randomNumbers(0, 9),
             hair: randomizer.randomLetters(3, 10),
             offense: randomizer.randomLetters_Numbers_Symbols(5, 15, true),
             dow: randomizer.randomDate(true),

@@ -3,21 +3,20 @@
             failures="0"
             tests="4">
 
-  <testsuite name="enterWantedSuite"
-    errors="1" failures="0" hostname="" id="" package="enterWantedSuite" skipped="3"
-    tests="4" time="0.006000" timestamp="Sun, 09 Sep 2018 16:40:30 GMT">
+  <testsuite name="modifyWantedSuite"
+    errors="1" failures="0" hostname="" id="" package="modifyWantedSuite" skipped="3"
+    tests="4" time="0.006000" timestamp="Sun, 09 Sep 2018 17:10:25 GMT">
   
-    <testcase name="Valid Entries" classname="enterWantedSuite" time="0.006000" assertions="0">
+    <testcase name="Valid Entries" classname="modifyWantedSuite" time="0.006000" assertions="0">
     </testcase>
   
 
   
     <system-err>
-        Error while running [Enter Wanted Suite / Valid Entries]:
+        Error while running [Modify Wanted Suite / Valid Entries]:
 
-  ReferenceError: randomizer is not defined
-    at Object.randomSex (/Users/Parker/DevMtn/Wanted Queries Automation/globalMethods/randomizer.js:41:17)
-    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:57:29)
+  ReferenceError: wantedPage is not defined
+    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/modifyWantedSuite.js:65:40)
     at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
@@ -26,23 +25,24 @@
     at /usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
     at runSingle (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
     at flush (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
     </system-err>
   
 
   
     
     <testcase
-      name="Invalid Character Entries" classname="enterWantedSuite">
+      name="Invalid Character Entries" classname="modifyWantedSuite">
       <skipped />
     </testcase>
     
     <testcase
-      name="Invalid Length Entries" classname="enterWantedSuite">
+      name="Invalid Length Entries" classname="modifyWantedSuite">
       <skipped />
     </testcase>
     
     <testcase
-      name="Optional Entries" classname="enterWantedSuite">
+      name="Optional Entries" classname="modifyWantedSuite">
       <skipped />
     </testcase>
     

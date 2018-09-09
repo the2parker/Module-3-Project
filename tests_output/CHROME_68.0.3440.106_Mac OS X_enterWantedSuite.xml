@@ -5,11 +5,12 @@
 
   <testsuite name="enterWantedSuite"
     errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="3"
-    tests="4" time="3.687" timestamp="Sun, 09 Sep 2018 08:50:04 GMT">
+    tests="4" time="14.11" timestamp="Sun, 09 Sep 2018 17:06:31 GMT">
   
-    <testcase name="Valid Entries" classname="enterWantedSuite" time="3.687" assertions="2">
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="14.11" assertions="2">
 
-      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;dI445S_&amp;`j.%k.f38k29G28.`½`2UnlN84&gt;`Z%?34??i4Zk.M.B.209.301.GKYjxYFon`.__&lt;£=.03-16-2016.J8ey?9&gt;@Fd$2^H8.UT.08-14-1979.C226voJ.UT.05-04-1950&#34;">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:72:21)</failure>
+      <failure message="Expected element &lt;@queryBody&gt; text to equal: &#34;U2uH\\76nTJ41f93A3.PGim.mCx0P2mQ9.0.EJ3I3«_SE.F.H.401.328.dsW.&lt;.:eF27P:.12-16-1932.2840Z9ÛG÷.UT.10-21-2077.M341jFX1.UT.09-16-2013&#34; - element was not found">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:75:21)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
 
     
     </testcase>

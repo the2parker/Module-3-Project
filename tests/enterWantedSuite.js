@@ -1,7 +1,9 @@
 //If you're seeing this, I am still working on finishing all of the automation.
-//It's been taking me longer than I thought it would to complete the automation, I had everything else finished but am still working on this.
+//It's been taking me longer than I thought it would to complete the automation,
+//I had everything else finished but am still working on this.
+//Randomizing everything might have been a bit much....
 
-var randomizer = require('../globalMethods/randomizer')
+var randomizer = require('../globalMethods/randomizer');
 
 var wantedPage
 
@@ -26,7 +28,7 @@ var enterInformation = function (pageObject, info = { header, mke, oai, name, se
         .setValue('@lpState', info.lpState)
         .setValue('@lpYear', info.lpYear)
 
-        return info.header + '.' + info.mke + '.' + info.oai + '.' + info.name + '.' + info.sex + '.' + info.race + '.' + info.height + '.' + info.weight + '.' + info.hair + '.' + info.offense + '.' + info.dow + '.' + info.driversLicense + '.' + info.dlState + '.' + info.dlYear + '.' + info.licensePlate + '.' + info.lpState + '.' + info.lpYear
+    return info.header + '.' + info.mke + '.' + info.oai + '.' + info.name + '.' + info.sex + '.' + info.race + '.' + info.height + '.' + info.weight + '.' + info.hair + '.' + info.offense + '.' + info.dow + '.' + info.driversLicense + '.' + info.dlState + '.' + info.dlYear + '.' + info.licensePlate + '.' + info.lpState + '.' + info.lpYear
 }
 
 //This is for the test suite https://dmutah.atlassian.net/browse/Q7P-54
@@ -48,13 +50,14 @@ module.exports = {
     // This test almost works except for the date is reversed in the output compared to what you put in the input.
     'Valid Entries': browser =>
     {
+        // let hello = randomizer.randomSex()
         let obj = {
             header: randomizer.randomLetters_Numbers_Symbols(9, 19, true),
             mke: randomizer.randomLetters_Symbols(2, 4, true),
             oai: randomizer.randomLetters_Numbers(9, 9),
             name: randomizer.randomLetters_Numbers_Symbols(3, 30, true),
-            sex: /*randomizer.randomSex()*/'M',
-            race: /*randomizer.randomRace()*/'B',
+            sex: /*randomizer.randomSex()*/'F', //these don't work for some reason
+            race: /*randomizer.randomRace()*/'H',
             height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9),
             weight: randomizer.randomInt(111, 999),
             hair: randomizer.randomLetters(3, 10),
@@ -70,7 +73,8 @@ module.exports = {
         let results = enterInformation(wantedPage, obj)
         wantedPage
             .click('@saveBtn')
-            .expect.element('@queryBody').text.to.equal(results)
+            // .api.pause(10000)
+            .expect.element('@queryBody').text.to.equal(results).before(1000)
 
     }, //This tests https://dmutah.atlassian.net/browse/Q7P-64
     'Invalid Character Entries': browser =>

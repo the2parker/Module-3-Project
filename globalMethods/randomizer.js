@@ -3,9 +3,9 @@ var randomLetter = function ()
 {
     let isCapital = Math.floor(Math.random() * (1 + 1))
     if (isCapital == 0)
-        return String.fromCharCode(96 + Math.floor(Math.random() * (26 - 0 + 1)) + 0)
+        return String.fromCharCode(97 + Math.floor(Math.random() * (25 - 0 + 1)) + 0)
     else if (isCapital == 1)
-        return (String.fromCharCode(96 + Math.floor(Math.random() * (26 - 0 + 1) + 0))).toUpperCase()
+        return (String.fromCharCode(97 + Math.floor(Math.random() * (25 - 0 + 1) + 0))).toUpperCase()
 }
 var randomNumber = function ()
 {

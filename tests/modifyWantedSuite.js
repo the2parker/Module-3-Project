@@ -30,21 +30,24 @@ var enterInformation = function (pageObject, info = { warrantID, header, mke, oa
     return info.warrantID + '.' + info.header + '.' + info.mke + '.' + info.oai + '.' + info.name + '.' + info.sex + '.' + info.race + '.' + info.height + '.' + info.weight + '.' + info.hair + '.' + info.offense + '.' + info.dow + '.' + info.driversLicense + '.' + info.dlState + '.' + info.dlYear + '.' + info.licensePlate + '.' + info.lpState + '.' + info.lpYear
 }
 
-//This is for the test suite https://dmutah.atlassian.net/browse/Q7P-54
+//This is for the test suite https://dmutah.atlassian.net/browse/Q7P-58
 module.exports = {
-    before: browser => {
+    before: browser =>
+    {
         modifyPage = browser.page.modifyWanted()
+    },
+    beforeEach: browser =>
+    {
         modifyPage
             .navigate()
             .waitForElementVisible('@versionNumber', 5000)
     },
-    beforeEach: browser => {
-
-    }, 
-    after: browser => {
-
-    }, //This tests https://dmutah.atlassian.net/browse/Q7P-55
-    'Valid Entries': browser => {
+    after: browser =>
+    {
+        browser.end()
+    }, //This tests https://dmutah.atlassian.net/browse/Q7P-59
+    'Valid Entries': browser =>
+    {
         let obj = {
             warrantID: randomizer.randomNumbers(10, 10),
             header: randomizer.randomLetters_Numbers_Symbols(9, 19, true),
@@ -70,14 +73,13 @@ module.exports = {
             .click('@saveBtn')
             // .api.pause(30000)
             .expect.element('@queryBody').text.to.equal(results).before(1000)
-    }, //This tests https://dmutah.atlassian.net/browse/Q7P-64
-    'Invalid Character Entries': browser => {
+    }, //This tests https://dmutah.atlassian.net/browse/Q7P-62
+    'Invalid Character Entries': browser =>
+    {
 
-    }, //This tests https://dmutah.atlassian.net/browse/Q7P-57
-    'Invalid Length Entries': browser => {
+    }, //This tests https://dmutah.atlassian.net/browse/Q7P-63
+    'Invalid Length Entries': browser =>
+    {
 
-    }, //This tests https://dmutah.atlassian.net/browse/Q7P-56
-    'Optional Entries': browser => {
-
-    },
+    }
 }

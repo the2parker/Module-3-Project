@@ -13,7 +13,7 @@ var randomNumber = function ()
     return Math.floor(Math.random() * (9 + 1)) + ''
 
 }
-var randomSymbol = function (noPeriod = false)
+var randomSymbol = function (noPeriod = true)
 {
     let symbolSelection = Math.floor(Math.random() * (4 - 1 + 1)) + 1
     switch (symbolSelection)
@@ -120,7 +120,7 @@ module.exports = {
 
         return characters
     },
-    randomLetters_Symbols: function (minLength, maxLength, noPeriod = false)
+    randomLetters_Symbols: function (minLength, maxLength, noPeriod = true)
     {
         let characters = ''
         let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength
@@ -136,7 +136,7 @@ module.exports = {
 
         return characters
     },
-    randomNumbers_Symbols: function (minLength, maxLength, noPeriod = false)
+    randomNumbers_Symbols: function (minLength, maxLength, noPeriod = true)
     {
         let characters = ''
         let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength
@@ -152,7 +152,7 @@ module.exports = {
 
         return characters
     },
-    randomLetters_Numbers_Symbols: function (minLength, maxLength, noPeriod = false)
+    randomLetters_Numbers_Symbols: function (minLength, maxLength, noPeriod = true)
     {
         let characters = ''
         let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength

@@ -5,11 +5,11 @@
 
   <testsuite name="modifyWantedSuite"
     errors="0" failures="1" hostname="" id="" package="modifyWantedSuite" skipped="3"
-    tests="4" time="4.608" timestamp="Sun, 09 Sep 2018 17:28:34 GMT">
+    tests="4" time="4.805" timestamp="Sun, 09 Sep 2018 18:07:46 GMT">
   
-    <testcase name="Valid Entries" classname="modifyWantedSuite" time="4.608" assertions="2">
+    <testcase name="Valid Entries" classname="modifyWantedSuite" time="4.805" assertions="2">
 
-      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;4838494102.5qL96\4A/z8.´P:w.c45232492.Lcc^r/15x28[Rs9da5y4.F.H.300.487.ZDfIywb.9]2\5ba9@:.03-01-1910.X883.UT.09-15-1960.811f3Yw.UT.09-08-1978&#34; in 1000ms">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/modifyWantedSuite.js:71:21)</failure>
+      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;1624505831.2G8b718÷681331k]2A.:GD.hCZv30Kf0.1&gt;Dm2^f5¦01=E`^5&lt;vV6v@æ9w77.F.H.903.367.dsS.ü1aKô3Gn.09-03-1998.9_1&#34;32_3msN.UT.09-10-2088.0sgx8R.UT.03-30-1936&#34; in 1000ms">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/modifyWantedSuite.js:72:21)</failure>
 
     
     </testcase>

@@ -106,7 +106,7 @@ module.exports = {
             .click('@saveBtn')
 
             //same as the error checking below
-            
+
     }, //This tests https://dmutah.atlassian.net/browse/Q7P-57
     'Invalid Length Entries': browser =>
     {
@@ -138,6 +138,7 @@ module.exports = {
             //get an array of all the error messages and loop through all of them checking for the key words of the error?
             //(not sure how to do that in JavaScript...)
 
+        wantedPage.navigate()
         // One Below the min
         let obj = {
             header: randomizer.randomLetters_Numbers_Symbols(8, 8, true),

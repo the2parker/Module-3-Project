@@ -80,6 +80,62 @@ module.exports = {
     }, //This tests https://dmutah.atlassian.net/browse/Q7P-63
     'Invalid Length Entries': browser =>
     {
+        //One above the max
+        let obj = {
+            warrantID: randomizer.randomNumbers(11, 11),
+            header: randomizer.randomLetters_Numbers_Symbols(20, 20, true),
+            mke: randomizer.randomLetters_Symbols(5, 5, true),
+            oai: randomizer.randomLetters_Numbers(10, 10),
+            name: randomizer.randomLetters_Numbers_Symbols(31, 31, true),
+            sex: /*randomizer.randomSex()*/'FF', //these don't work for some reason
+            race: /*randomizer.randomRace()*/'HH',
+            height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9) + '0',
+            weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + '0',
+            hair: randomizer.randomLetters(11, 11),
+            offense: randomizer.randomLetters_Numbers_Symbols(16, 16, true),
+            dow: randomizer.randomDate(true) + '0',
+            driversLicense: randomizer.randomLetters_Numbers_Symbols(21, 21, true),
+            dlState: 'UTA',
+            dlYear: randomizer.randomDate() + '0',
+            licensePlate: randomizer.randomLetters_Numbers(9, 9),
+            lpState: 'UTS',
+            lpYear: randomizer.randomDate() + '0'
+        }
+        enterInformation(modifyPage, obj)
+        modifyPage
+            .click('@saveBtn')
+
+        //how am I going to check?
+        //get an array of all the error messages and loop through all of them checking for the key words of the error?
+        //(not sure how to do that in JavaScript...)
+
+        modifyPage.navigate()
+        // One Below the min
+        let obj = {
+            warrantID: randomizer.randomNumbers(9, 9),
+            header: randomizer.randomLetters_Numbers_Symbols(8, 8, true),
+            mke: randomizer.randomLetters_Symbols(1, 1, true),
+            oai: randomizer.randomLetters_Numbers(8, 8),
+            name: randomizer.randomLetters_Numbers_Symbols(2, 2, true),
+            sex: /*randomizer.randomSex()*/'H', //since it counts an empty field as missing and not incorrect length,
+            race: /*randomizer.randomRace()*/'F', //I'm ignoring this
+            height: randomizer.randomInt(1, 9) + '0',
+            weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1),
+            hair: randomizer.randomLetters(2, 2),
+            offense: randomizer.randomLetters_Numbers_Symbols(4, 4, true),
+            dow: randomizer.randomDate(true).substring(0, 6), // figure out how to trim the last letter
+            driversLicense: randomizer.randomLetters_Numbers_Symbols(1, 20, true), //same as above
+            dlState: 'U',
+            dlYear: randomizer.randomDate().substring(0, 6),
+            licensePlate: randomizer.randomLetters_Numbers(4, 4),
+            lpState: 'U',
+            lpYear: randomizer.randomDate().substring(0, 6)
+        }
+        enterInformation(modifyPage, obj)
+        wantedPage
+            .click('@saveBtn')
+
+        //Still haven't figured it out.
 
     }
 }

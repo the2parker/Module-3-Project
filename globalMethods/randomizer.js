@@ -212,4 +212,39 @@ module.exports = {
 
         return newMonth + '-' + newDay + '-' + newYear
     }, //a random date between 1900 and 2100
+    randomFutureDate: function (maxYear = 2100)
+    {
+        let today = new Date()
+        let minDay = 1
+        let maxDay = 31
+        let minMonth = 1
+        let maxMonth = 12
+        let minYear = today.getFullYear()
+        let maxYear = 2100
+
+
+
+        let newYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear
+
+        if (newYear == minYear)
+        {
+            minMonth = today.getMonth() + 1
+            minDay = today.getDate()
+        }
+
+        let newMonth = Math.floor(Math.random() * (maxMonth - minMonth + 1)) + minMonth
+        let newDay = newDay = Math.floor(Math.random() * (maxDay - minDay + 1)) + minDay
+
+        if (newDay < 10)
+            newDay = '0' + newDay
+        else
+            newDay = '' + newDay
+
+        if (newMonth < 10)
+            newMonth = '0' + newMonth
+        else
+            newMonth = '' + newMonth
+
+        return newMonth + '-' + newDay + '-' + newYear
+    }
 }

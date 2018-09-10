@@ -5,7 +5,9 @@ module.exports = {
         clearBtn: '#clearBtn',
         queryTitle: 'span[name = "queryTitle"]',
         queryBody: 'span[name = "queryBody"]',
-        //put in the other fields here
+        warrantID: 'input[name = "widInput"]',
+        reason: 'input[name = "resInput"]',
+        date: 'input[name = "datInput"]',
         versionNumber: '#pageWrap > div:nth-child(2) > h6:nth-child(1)'
     }
 }

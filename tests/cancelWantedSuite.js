@@ -53,7 +53,7 @@ module.exports = {
         let results = enterInformation(cancelPage, obj)
         cancelPage
             .click('@saveBtn')
-            // .api.pause(10000)
+        // .api.pause(10000)
 
     }, //This tests https://dmutah.atlassian.net/browse/Q7P-66
     'Invalid Length Entries': browser =>
@@ -67,11 +67,11 @@ module.exports = {
         let results = enterInformation(cancelPage, obj)
         cancelPage
             .click('@saveBtn')
-            // .api.pause(10000)
+        // .api.pause(10000)
 
         cancelPage.navigate()
         // min - 1
-        let obj = {
+        obj = {
             warrantID: randomizer.randomNumbers(9, 9),
             reason: randomizer.randomLetters_Numbers_Symbols(9, 9),
             date: randomizer.randomFutureDate().substring(0, 6)
@@ -79,7 +79,7 @@ module.exports = {
         let results = enterInformation(cancelPage, obj)
         wantedPage
             .click('@saveBtn')
-            // .api.pause(10000)
+        // .api.pause(10000)
     }
 
 }

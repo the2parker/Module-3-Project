@@ -57,7 +57,7 @@ module.exports = {
             sex: /*randomizer.randomSex()*/'F', //these don't work for some reason
             race: /*randomizer.randomRace()*/'H',
             height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9),
-            weight: randomizer.randomInt(111, 999),
+            weight: randomizer.randomInt(3, 3),
             hair: randomizer.randomLetters(3, 10),
             offense: randomizer.randomLetters_Numbers_Symbols(5, 15, true),
             dow: randomizer.randomDate(true),
@@ -87,7 +87,7 @@ module.exports = {
             mke: randomizer.randomLetters_Symbols(5, 5, true),
             oai: randomizer.randomLetters_Numbers(10, 10),
             name: randomizer.randomLetters_Numbers_Symbols(31, 31, true),
-            sex: /*randomizer.randomSex()*/'FF', //these don't work for some reason
+            sex: /*randomizer.randomSex()*/'FF',
             race: /*randomizer.randomRace()*/'HH',
             height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9) + '0',
             weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + '0',
@@ -111,14 +111,14 @@ module.exports = {
 
         modifyPage.navigate()
         // One Below the min
-        let obj = {
+        obj = {
             warrantID: randomizer.randomNumbers(9, 9),
             header: randomizer.randomLetters_Numbers_Symbols(8, 8, true),
             mke: randomizer.randomLetters_Symbols(1, 1, true),
             oai: randomizer.randomLetters_Numbers(8, 8),
             name: randomizer.randomLetters_Numbers_Symbols(2, 2, true),
-            sex: /*randomizer.randomSex()*/'H', //since it counts an empty field as missing and not incorrect length,
-            race: /*randomizer.randomRace()*/'F', //I'm ignoring this
+            sex: randomizer.randomSex(), //since it counts an empty field as missing and not incorrect length,
+            race: randomizer.randomRace(), //I'm ignoring this
             height: randomizer.randomInt(1, 9) + '0',
             weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1),
             hair: randomizer.randomLetters(2, 2),

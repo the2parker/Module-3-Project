@@ -19,26 +19,32 @@ var randomSymbol = function (noPeriod = true)
     switch (symbolSelection)
     {
         case 1:
-            let character = String.fromCharCode(Math.floor(Math.random() * (47 + 1)))
-            if (character == 46 && noPeriod)
-                character++
+            let character = String.fromCharCode(Math.floor(Math.random() * (47 - 32 + 1)) + 32)
+            if (character == '.' && noPeriod)
+            {
+                character = String.fromCharCode(character.charCodeAt(0) + 1)
+            }
             return character
         case 2:
             return String.fromCharCode(Math.floor(Math.random() * (64 - 58 + 1)) + 58)
         case 3:
             return String.fromCharCode(Math.floor(Math.random() * (96 - 91 + 1)) + 91)
         case 4:
-            return String.fromCharCode(Math.floor(Math.random() * (255 - 123 + 1)) + 123)
+            return String.fromCharCode(Math.floor(Math.random() * (126 - 123 + 1)) + 123)
     }
 }
+
+var randomInt = function (min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
 module.exports = {
-    randomInt: function (min, max)
-    {
-        return Math.floor(Math.random() * (max - min + 1)) + min
-    },
+    randomInt: randomInt,
+
     randomSex: function ()
     {
-        switch (randomizer.randomInt(1, 3))
+        switch (randomInt(1, 3))
         {
             case 1:
                 return 'F'
@@ -47,11 +53,12 @@ module.exports = {
             case 3:
                 return 'U'
         }
+        console.log('error')
         return ''
     },
     randomRace: function ()
     {
-        switch (randomizer.randomInt(1, 6))
+        switch (randomInt(1, 6))
         {
             case 1:
                 return 'A'
@@ -66,6 +73,7 @@ module.exports = {
             case 6:
                 return 'U'
         }
+        console.log('race error')
         return ''
     },
     randomLetters: function (minLength, maxLength)
@@ -220,7 +228,6 @@ module.exports = {
         let minMonth = 1
         let maxMonth = 12
         let minYear = today.getFullYear()
-        let maxYear = 2100
 
 
 
@@ -233,7 +240,7 @@ module.exports = {
         }
 
         let newMonth = Math.floor(Math.random() * (maxMonth - minMonth + 1)) + minMonth
-        let newDay = newDay = Math.floor(Math.random() * (maxDay - minDay + 1)) + minDay
+        let newDay = Math.floor(Math.random() * (maxDay - minDay + 1)) + minDay
 
         if (newDay < 10)
             newDay = '0' + newDay

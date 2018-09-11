@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="1"
-            tests="3">
+            tests="4">
 
   <testsuite name="enterWantedSuite"
-    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="0"
-    tests="3" time="13.66" timestamp="Sun, 09 Sep 2018 18:15:16 GMT">
+    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="3"
+    tests="4" time="23.84" timestamp="Tue, 11 Sep 2018 16:16:27 GMT">
   
-    <testcase name="Invalid Character Entries" classname="enterWantedSuite" time="1.867" assertions="1">
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="23.84" assertions="2">
 
-    
-    </testcase>
-  
-    <testcase name="Invalid Length Entries" classname="enterWantedSuite" time="0.000" assertions="0">
-    </testcase>
-  
-    <testcase name="Optional Entries" classname="enterWantedSuite" time="11.79" assertions="1">  <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;8=0VUycI69f.&gt;&lt;i¡.24l57Sc93.5*wv799M[.F.H.807.670.nHLnquV.&gt;6D6o7s06.12-12-1994......&#34; in 10000ms">    at Object.Optional Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:134:21)</failure>
+      <failure message="Expected element &lt;@queryBody&gt; text to equal: &#34;a&#34; in 10000ms - element was not found">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:38:21)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
 
     
     </testcase>
@@ -23,6 +18,23 @@
 
   
 
+  
+    
+    <testcase
+      name="Invalid Character Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Invalid Length Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Optional Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
   
   </testsuite>
 </testsuites>

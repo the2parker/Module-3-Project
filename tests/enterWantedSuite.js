@@ -34,8 +34,8 @@ module.exports = {
         let results = functions.enterInformation(wantedPage, data.randomValidData)
         wantedPage
             .click('@saveBtn')
-            .api.pause(10000)
-            .expect.element('@queryBody').text.to.equal('a').before(10000)
+            //.api.pause(10000)
+            .expect.element('@queryBody').text.to.equal(results).before(10000)
 
     }, //This tests https://dmutah.atlassian.net/browse/Q7P-64
     'Invalid Character Entries': browser =>
@@ -54,7 +54,30 @@ module.exports = {
         functions.enterInformation(wantedPage, data.randomInvalidLengthData[0])
         wantedPage
             .click('@saveBtn')
-        browser.pause(3000)
+        browser.elements('css selector', '.errorMessage', results =>
+        {
+            wantedPage.verify.ok(results.value.length == 15, `Expecting 15 results; but found ${results.value.length}`, 'Has 15 results')
+
+            results.value.forEach(result =>
+            {
+                browser.elementIdText(result.ELEMENT, function (element)
+                {
+                    wantedPage.verify.ok(element.value.includes('field should be'), `"${element.value}" does not contain "field should be"`, 'Contained "field should be"')
+                    wantedPage.verify.ok(element.value.includes('long'), `"${element.value}" does not contain "long"`, 'Contained "long"')
+
+                })
+            })
+        })
+
+        browser.refresh()
+        wantedPage.waitForElementVisible('@versionNumber', 5000)
+        // One Below the min
+
+        functions.enterInformation(wantedPage, data.randomInvalidLengthData[1])
+        wantedPage
+            .click('@saveBtn')
+            .api.pause(30000)
+
         browser.elements('css selector', '.errorMessage', results =>
         {
             //browser.verify
@@ -62,7 +85,7 @@ module.exports = {
                 .clearValue('@header')
                 .setValue('@header', results.value.length)
                 .api.pause(100)
-            wantedPage.verify.valueContains('@header', '15')
+            wantedPage.verify.valueContains('@header', '10')
 
             results.value.forEach(result =>
             {
@@ -77,17 +100,8 @@ module.exports = {
                     wantedPage.verify.valueContains('@header', 'long')
 
                 })
-                //browser.verify.containsText(result.elementIdElement, 'long')
             })
         })
-
-        browser.refresh()
-        wantedPage.waitForElementVisible('@versionNumber', 5000)
-        // One Below the min
-
-        functions.enterInformation(wantedPage, data.randomInvalidLengthData[1])
-        wantedPage
-            .click('@saveBtn')
 
         //Still haven't figured it out.
 

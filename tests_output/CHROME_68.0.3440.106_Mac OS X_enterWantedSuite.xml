@@ -4,13 +4,135 @@
             tests="4">
 
   <testsuite name="enterWantedSuite"
-    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="3"
-    tests="4" time="23.84" timestamp="Tue, 11 Sep 2018 16:16:27 GMT">
+    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="0"
+    tests="4" time="65.13" timestamp="Tue, 11 Sep 2018 21:01:06 GMT">
   
-    <testcase name="Valid Entries" classname="enterWantedSuite" time="23.84" assertions="2">
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="3.479" assertions="2">
 
-      <failure message="Expected element &lt;@queryBody&gt; text to equal: &#34;a&#34; in 10000ms - element was not found">    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:38:21)
-    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Character Entries" classname="enterWantedSuite" time="1.381" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Length Entries" classname="enterWantedSuite" time="48.38" assertions="54">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Optional Entries" classname="enterWantedSuite" time="11.89" assertions="2">
+
+      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;0`|~}sP8271}@2yI.&gt;?[+.n926CY985.45klFX954886\S~20/V1431@.F.H.502.991.OePIMKAf.`o$!z\368JDNz.1981-05-23......&#34; in 10000ms">    at Object.Optional Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:145:21)</failure>
 
     
     </testcase>
@@ -18,23 +140,6 @@
 
   
 
-  
-    
-    <testcase
-      name="Invalid Character Entries" classname="enterWantedSuite">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Invalid Length Entries" classname="enterWantedSuite">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Optional Entries" classname="enterWantedSuite">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

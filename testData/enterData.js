@@ -7,7 +7,7 @@ module.exports = {
         oai: randomizer.randomLetters_Numbers(9, 9),
         name: randomizer.randomLetters_Numbers_Symbols(3, 30, true),
         sex: randomizer.randomSex(), //these don't work for some reason
-        race: /*randomizer.randomRace()*/'I',
+        race: randomizer.randomRace(),
         height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9),
         weight: randomizer.randomNumbers(3, 3),
         hair: randomizer.randomLetters(3, 10),
@@ -25,8 +25,8 @@ module.exports = {
         mke: randomizer.randomLetters_Symbols(5, 5, true),
         oai: randomizer.randomLetters_Numbers(10, 10),
         name: randomizer.randomLetters_Numbers_Symbols(31, 31, true),
-        sex: /*randomizer.randomSex()*/'FF', //these don't work for some reason
-        race: /*randomizer.randomRace()*/'HH',
+        sex: randomizer.randomSex(), //these don't work for some reason
+        race: randomizer.randomRace(),
         height: randomizer.randomInt(1, 9) + '0' + randomizer.randomInt(0, 9) + '0',
         weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1) + '0',
         hair: randomizer.randomLetters(11, 11),
@@ -51,21 +51,21 @@ module.exports = {
         weight: randomizer.randomNumbers(1, 1) + randomizer.randomNumbers(1, 1),
         hair: randomizer.randomLetters(2, 2),
         offense: randomizer.randomLetters_Numbers_Symbols(4, 4, true),
-        dow: randomizer.randomDate(true).substring(0, 6), // figure out how to trim the last letter
+        dow: randomizer.randomDate(true), // figure out how to trim the last letter
         driversLicense: randomizer.randomLetters_Numbers_Symbols(1, 20, true), //same as above
         dlState: 'U',
-        dlYear: randomizer.randomDate().substring(0, 6),
+        dlYear: randomizer.randomDate(),
         licensePlate: randomizer.randomLetters_Numbers(4, 4),
         lpState: 'U',
-        lpYear: randomizer.randomDate().substring(0, 6)
+        lpYear: randomizer.randomDate()
     }],
     randomInvalidCharacterData: {
         header: randomizer.randomLetters_Numbers_Symbols(9, 19, true), //ignore this one
         mke: randomizer.randomNumbers(2, 4),
         oai: randomizer.randomSymbols(9, 9),
         name: randomizer.randomLetters_Numbers_Symbols(3, 30, true), //ignore this one
-        sex: randomizer.randomNumbers_Symbols(1, 1), //these don't work for some reason
-        race: randomizer.randomNumbers_Symbols(1, 1),
+        sex: randomizer.randomSex(), //ignoring these since they are a dropdown
+        race: randomizer.randomRace(),
         height: randomizer.randomLetters_Symbols(1, 3, true),
         weight: randomizer.randomLetters_Symbols(1, 3, true),
         hair: randomizer.randomNumbers_Symbols(3, 10, true),

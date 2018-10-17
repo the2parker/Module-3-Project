@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="4">
+
+  <testsuite name="enterWantedSuite"
+    errors="0" failures="1" hostname="" id="" package="enterWantedSuite" skipped="0"
+    tests="4" time="58.04" timestamp="Mon, 17 Sep 2018 17:35:09 GMT">
+  
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="3.618" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Character Entries" classname="enterWantedSuite" time="1.504" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Length Entries" classname="enterWantedSuite" time="41.15" assertions="54">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Optional Entries" classname="enterWantedSuite" time="11.76" assertions="2">
+
+      <failure message="Expected element &lt;span[name = &#34;queryBody&#34;]&gt; text to equal: &#34;T}t3yc7NJ8|+J43.e$w.I866767N9.1aD0~fh|%&#34;|:.F.H.503.925.Rsm.9}&gt;6668oS4.1967-05-29......&#34; in 10000ms">    at Object.Optional Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:135:21)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

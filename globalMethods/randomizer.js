@@ -53,7 +53,6 @@ module.exports = {
             case 3:
                 return 'U'
         }
-        console.log('error')
         return ''
     },
     randomRace: function ()
@@ -73,7 +72,6 @@ module.exports = {
             case 6:
                 return 'U'
         }
-        console.log('race error')
         return ''
     },
     randomLetters: function (minLength, maxLength)

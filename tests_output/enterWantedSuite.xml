@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="1"
             failures="0"
-            tests="2">
+            tests="4">
 
   <testsuite name="enterWantedSuite"
-    errors="1" failures="0" hostname="" id="" package="enterWantedSuite" skipped="1"
-    tests="2" time="0.01100" timestamp="Mon, 10 Sep 2018 21:36:54 GMT">
+    errors="1" failures="0" hostname="" id="" package="enterWantedSuite" skipped="3"
+    tests="4" time="0.006000" timestamp="Tue, 11 Sep 2018 17:08:39 GMT">
   
-    <testcase name="Invalid Length Entries" classname="enterWantedSuite" time="0.01100" assertions="0">
+    <testcase name="Valid Entries" classname="enterWantedSuite" time="0.006000" assertions="0">
     </testcase>
   
 
   
     <system-err>
-        Error while running [Enter Wanted Suite / Invalid Length Entries]:
+        Error while running [Enter Wanted Suite / Valid Entries]:
 
-  TypeError: wantedPage.click(...).pause is not a function
-    at Object.Invalid Length Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:155:14)
+  Error: sex option[value = &#34;M&#34;] was not found in &#34;enterWanted&#34;. Available elements: saveBtn,clearBtn,queryTitle,queryBody,header,mke,oai,name,sex,race,height,weight,hair,offense,dow,driversLicense,dlState,dlYear,licensePlate,lpState,lpYear,versionNumber
+    at getElement (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:13:13)
+    at Page.click (/usr/local/lib/node_modules/nightwatch/lib/page-object/command-wrapper.js:81:32)
+    at Object.enterInformation (/Users/Parker/DevMtn/Wanted Queries Automation/testFunctions/enterFunctions.js:9:14)
+    at Object.Valid Entries (/Users/Parker/DevMtn/Wanted Queries Automation/tests/enterWantedSuite.js:34:33)
     at Module.call (/usr/local/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /usr/local/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
     at self.promiseDispatch.done (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
     at Promise.promise.promiseDispatch (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
     at /usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
-    at runSingle (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
-    at flush (/usr/local/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)
-    at _combinedTickCallback (internal/process/next_tick.js:131:7)
     </system-err>
   
 
   
+    
+    <testcase
+      name="Invalid Character Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Invalid Length Entries" classname="enterWantedSuite">
+      <skipped />
+    </testcase>
     
     <testcase
       name="Optional Entries" classname="enterWantedSuite">
